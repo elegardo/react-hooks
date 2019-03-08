@@ -1,9 +1,9 @@
-import React, { useContext, useState } from 'react';
+import React, { useState, useContext  } from 'react';
 import { Statistic, Card, Button } from 'semantic-ui-react'
 
-export function Counter({ context }) {
+export function Counter({ context }) { /* <===== parameter */
     
-    const [count, setCount] = useContext(context)
+    const [count, setCount] = useContext(context) /* <===== use context */
     const [action, setLastAction] = useState('')
 
     return (
@@ -20,14 +20,14 @@ export function Counter({ context }) {
                     <Statistic.Value>{count}</Statistic.Value>
                 </Statistic>
                 <div className='ui two buttons'>
-                
-                    <Button basic color='green' onClick={() => {setLastAction('+'), setCount(count + 1)}}>
+                    <Button basic color='green' 
+                            onClick={() => {setLastAction('+'), setCount(count + 1)}}>
                         +
                     </Button>
-                    <Button basic color='red' onClick={() => {setLastAction('-'), setCount(count - 1)}}>
+                    <Button basic color='red' 
+                            onClick={() => {setLastAction('-'), setCount(count - 1)}}>
                         -
                     </Button>
-                    
                 </div>
             </Card.Content>
         </Card>

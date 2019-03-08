@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Menu } from 'semantic-ui-react'
 
-import Demo_1 from './Demo_1'
-import Demo_2 from './Demo_2'
+import Demo_1 from './containers/Demo_1'
+import Demo_2 from './containers/Demo_2'
+
 import './App.css'
 
 export const App = () => {

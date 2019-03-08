@@ -1,7 +1,7 @@
 import React from 'react'
 import { Icon, Container, Divider, Grid, Header } from 'semantic-ui-react'
 
-import { Counter } from './components/Counter_1'
+import { Counter } from '../../components/Counter_1'
 
 const Demo = () => (
     <Container>
