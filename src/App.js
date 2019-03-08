@@ -1,17 +1,38 @@
-import React from 'react';
-import Demo from './Demo_1'
+import React, { useState } from 'react';
+import { Menu } from 'semantic-ui-react'
 
+import Demo_1 from './Demo_1'
+import Demo_2 from './Demo_2'
 import './App.css'
 
-export default class App extends React.Component {
+export const App = () => {
 
-  render() {
+  const [activeItem, setActiveItem] = useState('demo1')
+
+  return(
+      <div>
+        <Menu pointing inverted>
+          <Menu.Item name='demo1' 
+                      active={activeItem === 'demo1'} 
+                      onClick={(e, { name }) => {setActiveItem(name)}}/>
+          <Menu.Item name='demo2'
+                      active={activeItem === 'demo2'}
+                      onClick={(e, { name }) => {setActiveItem(name)}}/>
+          <Menu.Item name='demo3'
+                      active={activeItem === 'demo3'}
+                      onClick={(e, { name }) => {setActiveItem(name)}}/>
+        </Menu>
+
+        {activeItem === 'demo1' &&
+            <Demo_1/>
+        }
+        {activeItem === 'demo2' &&
+            <Demo_2/>
+        }
+
+      </div>
+  );
     
-    return (
-        <div>
-            <Demo/>
-        </div>
-    )
-  }
-
 };
+  
+export default App;

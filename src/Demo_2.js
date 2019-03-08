@@ -1,5 +1,5 @@
 import React, { useState }  from 'react'
-import { Icon, Container, Divider, Grid, Header, Button, Card } from 'semantic-ui-react'
+import { Icon, Container, Divider, Grid, Header, Button, Card, Statistic } from 'semantic-ui-react'
 
 import { Counter } from './components/Counter_2'
 import { CounterContext } from './components/context'
@@ -16,7 +16,7 @@ const Demo = () => {
 
             <Header as='h2' icon inverted textAlign='center'>
                 <Icon name='code' />
-                    Demo 2
+                useState & useContext
             </Header>
             
             <Divider />
@@ -25,14 +25,19 @@ const Demo = () => {
             <Grid container columns={1}>
                 <Grid.Column>
                     <Card fluid>
-                        <Card.Content>
-                            <Card.Header>Parent: {count}</Card.Header>
+                        <Card.Content extra textAlign='center'>
+                            <Card.Header>
+                                <Header as='h2'>Counter</Header>
+                            </Card.Header>
                             <Card.Meta>
                                 Last action: {action}
                             </Card.Meta>
+                            <Statistic>
+                                <Statistic.Value>{count}</Statistic.Value>
+                            </Statistic>
                         </Card.Content>
 
-                        <Card.Content>
+                        <Card.Content extra textAlign='center'>
                             <Grid container columns={3}>
                                 <Grid.Column>
                                     <Counter context={CounterContext}/>
@@ -48,19 +53,21 @@ const Demo = () => {
                             </Grid>
                         </Card.Content>
 
-
                         <Card.Content extra textAlign='center'>
                             <div className='ui two buttons'>
                             
-                                <Button basic color='green' onClick={() => {setLastAction('+'), setCount(count + 1)}}>
+                                <Button color='green' 
+                                        onClick={() => {setLastAction('+'), setCount(count + 1)}}>
                                     +
                                 </Button>
-                                <Button basic color='red' onClick={() => {setLastAction('-'), setCount(count - 1)}}>
+                                <Button  color='red' 
+                                        onClick={() => {setLastAction('-'), setCount(count - 1)}}>
                                     -
                                 </Button>
                                 
                             </div>
                         </Card.Content>
+
                     </Card>
                 </Grid.Column>
             </Grid>

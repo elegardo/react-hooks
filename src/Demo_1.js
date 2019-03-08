@@ -8,7 +8,7 @@ const Demo = () => (
 
         <Header as='h2' icon inverted textAlign='center'>
             <Icon name='code' />
-                Demo 1
+            useState
         </Header>
         
         <Divider />
@@ -25,7 +25,7 @@ const Demo = () => (
             <Grid.Column>
                 <Counter/>
             </Grid.Column>
-      </Grid>
+        </Grid>
 
     </Container>
 )
