@@ -1,7 +1,7 @@
 import React from 'react';
 import { Statistic, Card } from 'semantic-ui-react'
 
-import { CounterContext } from '../../context' /* <===== import context */
+import { CounterContext } from '../../components/CounterContext' /* <===== import context */
 
 export function Consumer() {
     

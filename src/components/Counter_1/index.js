@@ -31,6 +31,5 @@ export function Counter() {
                 </div>
             </Card.Content>
         </Card>
-
     )
 }
