@@ -1,7 +1,11 @@
 {
+  "name": "react-hooks",
+  "homepage": "https://elegardo.github.io/react-hooks",
   "scripts": {
     "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -21,6 +25,7 @@
     "url-loader": "^1.1.2"
   },
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.2.0"
