@@ -1,5 +1,7 @@
 {
   "name": "react-hooks",
+  "version": "0.1.0",
+  "private": true,
   "homepage": "https://elegardo.github.io/react-hooks",
   "scripts": {
     "start": "webpack-dev-server --mode development",

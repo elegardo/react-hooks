@@ -12,7 +12,8 @@ module.exports = (env) => [
   entry: './src/index.js',
   output: {
     path: PATHS.build,
-    filename: 'app-bundle.js'
+    publicPath: '',
+    filename: '[name].[contenthash].js'
   },
   module: {
     rules: [
@@ -57,7 +58,7 @@ module.exports = (env) => [
       filename: "./index.html",
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].css",
+      filename: "[name].[contenthash].css",
       chunkFilename: "[id].css"
     }),
   ]
