@@ -1,7 +1,7 @@
 import React from 'react';
 import { Statistic, Card } from 'semantic-ui-react'
 
-import { CounterContext } from '../../contexts/Counter/context' /* <===== import context */
+import { CounterConsumer } from '../../contexts/Counter/consumer' /* <===== import consumer */
 
 export function CounterWithConsumer() {
     
@@ -13,7 +13,7 @@ export function CounterWithConsumer() {
 
             {/* ===> context consumer */}
             
-            <CounterContext.Consumer> 
+            <CounterConsumer> 
                 { count  =>
                 <Card.Content extra textAlign='center'>
                     <Statistic>
@@ -21,7 +21,7 @@ export function CounterWithConsumer() {
                     </Statistic>
                 </Card.Content>
                 }
-            </CounterContext.Consumer>
+            </CounterConsumer>
 
         </Card>
 
