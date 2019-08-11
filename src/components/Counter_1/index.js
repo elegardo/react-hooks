@@ -17,14 +17,16 @@ export function Counter() {
 
             <Card.Content extra textAlign='center'>
                 <Statistic>
-                    <Statistic.Value>{count}</Statistic.Value> {/* <===== count state */}
+                    <Statistic.Value id='value'>{count}</Statistic.Value> {/* <===== count state */}
                 </Statistic>
                 <div className='ui two buttons'>
-                    <Button basic color='green' 
+                    <Button id='button-plus' 
+                            basic color='green' 
                             onClick={() => {setLastAction('+'), setCount(count + 1)}}> {/* <===== action,count settings */}
                         +
                     </Button>
-                    <Button basic color='red' 
+                    <Button id='button-minus' 
+                            basic color='red' 
                             onClick={() => {setLastAction('-'), setCount(count - 1)}}> {/* <===== action,count settings */}
                         -
                     </Button>
