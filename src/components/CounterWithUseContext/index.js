@@ -1,9 +1,9 @@
 import React, { useState, useContext  } from 'react';
 import { Statistic, Card, Button } from 'semantic-ui-react'
 
-import { CounterContext } from '../../components/CounterContext' /* <===== import context */
+import { CounterContext } from '../../contexts/CounterContext' /* <===== import context */
 
-export function Counter() {
+export function CounterWithUseContext() {
     
     const [count, setCount] = useContext(CounterContext) /* <===== use context */
     const [internal, setInternal] = useState(0)          /* <===== internal state */

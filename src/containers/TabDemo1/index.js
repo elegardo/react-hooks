@@ -1,9 +1,9 @@
 import React from 'react'
 import { Icon, Container, Divider, Grid, Header } from 'semantic-ui-react'
 
-import { Counter } from '../../components/Counter_1'
+import { CounterWithUseState as Counter } from '../../components/CounterWithUseState'
 
-const Demo = () => (
+const TabDemo1 = () => (
     <Container>
 
         <Header as='h2' icon inverted textAlign='center'>
@@ -30,4 +30,4 @@ const Demo = () => (
     </Container>
 )
 
-export default Demo  
+export default TabDemo1  

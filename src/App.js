@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Menu } from 'semantic-ui-react'
 
-import Demo_1 from './containers/Demo_1'
-import Demo_2 from './containers/Demo_2'
+import TabDemo1 from './containers/TabDemo1'
+import TabDemo2 from './containers/TabDemo2'
 
 import './App.css'
 
@@ -22,10 +22,10 @@ export const App = () => {
         </Menu>
 
         {activeItem === 'demo1' &&
-            <Demo_1/>
+            <TabDemo1/>
         }
         {activeItem === 'demo2' &&
-            <Demo_2/>
+            <TabDemo2/>
         }
       </div>
   );

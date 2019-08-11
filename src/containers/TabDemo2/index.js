@@ -1,11 +1,11 @@
 import React from 'react'
 import { Icon, Container, Divider, Grid, Header } from 'semantic-ui-react'
 
-import { CounterProvider } from '../../components/CounterContext' /* <===== import context */
-import { Counter } from '../../components/Counter_2'
+import { CounterProvider } from '../../contexts/CounterContext' /* <===== import context */
+import { CounterWithUseContext as Counter } from '../../components/CounterWithUseContext'
 import { Consumer } from '../../components/Consumer'
 
-const Demo = () => { 
+const TabDemo2 = () => { 
 
     return (
         <Container>
@@ -37,4 +37,4 @@ const Demo = () => {
 
         </Container>
     )}
-export default Demo 
+export default TabDemo2 
