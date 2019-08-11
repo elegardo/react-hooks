@@ -1,9 +1,10 @@
 import React from 'react'
 import { Icon, Container, Divider, Grid, Header } from 'semantic-ui-react'
 
-import { CounterProvider } from '../../contexts/CounterContext' /* <===== import context */
-import { CounterWithUseContext as Counter } from '../../components/CounterWithUseContext'
-import { Consumer } from '../../components/Consumer'
+import { CounterWithContext} from '../../components/CounterWithContext'
+import { CounterWithConsumer } from '../../components/CounterWithConsumer'
+
+import { CounterProvider } from '../../contexts/Counter/provider' /* <===== import provider */
 
 const TabDemo2 = () => { 
 
@@ -17,19 +18,19 @@ const TabDemo2 = () => {
             
             <Divider />
 
-<CounterProvider> {/* <===== context */}
+<CounterProvider> {/* <===== provider */}
 
             <Grid container columns={3}>
                 <Grid.Column>
-                    <Counter/> {/* <==== counter with context */} 
+                    <CounterWithContext/> {/* <==== counter with context */} 
                 </Grid.Column>
 
                 <Grid.Column>
-                    <Counter/> {/* <==== counter with context */}
+                    <CounterWithContext/> {/* <==== counter with context */}
                 </Grid.Column>
                 
                 <Grid.Column>
-                    <Consumer/> {/* <==== consumer */}
+                    <CounterWithConsumer/> {/* <==== counter consumer */}
                 </Grid.Column>
             </Grid>
             

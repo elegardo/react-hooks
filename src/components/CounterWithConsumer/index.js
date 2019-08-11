@@ -1,9 +1,9 @@
 import React from 'react';
 import { Statistic, Card } from 'semantic-ui-react'
 
-import { CounterContext } from '../../contexts/CounterContext' /* <===== import context */
+import { CounterContext } from '../../contexts/Counter/context' /* <===== import context */
 
-export function Consumer() {
+export function CounterWithConsumer() {
     
     return (
         <Card>

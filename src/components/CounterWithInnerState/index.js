@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Statistic, Card, Button } from 'semantic-ui-react'
 
-export function CounterWithUseState() {
+export function CounterWithInnerState() {
 
     const [count, setCount] = useState(0)         /* <===== count state */
     const [action, setLastAction] = useState('')  /* <===== action state */

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Icon, Container, Divider, Grid, Header } from 'semantic-ui-react'
 
-import { CounterWithUseState as Counter } from '../../components/CounterWithUseState'
+import { CounterWithInnerState } from '../../components/CounterWithInnerState'
 
 const TabDemo1 = () => (
     <Container>
@@ -15,15 +15,15 @@ const TabDemo1 = () => (
 
         <Grid container columns={3}>
             <Grid.Column>
-                <Counter/>
+                <CounterWithInnerState/>
             </Grid.Column>
 
             <Grid.Column>
-                <Counter/>
+                <CounterWithInnerState/>
             </Grid.Column>
             
             <Grid.Column>
-                <Counter/>
+                <CounterWithInnerState/>
             </Grid.Column>
         </Grid>
 

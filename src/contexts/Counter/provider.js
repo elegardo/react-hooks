@@ -1,7 +1,5 @@
-import React, { createContext, useState } from 'react';
-
-// Create a context which gives Provider and Consumer
-const CounterContext = createContext([0, () => {}]);
+import React, { useState } from 'react';
+import { CounterContext } from './context'
 
 //export the provider with state and other methods
 const CounterProvider = props => {
@@ -15,4 +13,4 @@ const CounterProvider = props => {
     );
 };
 
-export { CounterContext, CounterProvider };
+export { CounterProvider };
