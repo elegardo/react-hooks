@@ -9,7 +9,7 @@ export function CounterWithInnerState() {
     return (
         <Card>
             <Card.Content>
-                <Card.Header>Counter</Card.Header>
+                <Card.Header>Counter with function</Card.Header>
                 <Card.Meta>
                     Last action: {action} {/* <===== action state */}
                 </Card.Meta>
@@ -22,12 +22,12 @@ export function CounterWithInnerState() {
                 <div className='ui two buttons'>
                     <Button id='button-plus' 
                             basic color='green' 
-                            onClick={() => {setLastAction('+'), setCount(count + 1)}}> {/* <===== action,count settings */}
+                            onClick={() => {setLastAction('+'), setCount(count => count + 1)}}> {/* <===== action,count settings */}
                         +
                     </Button>
                     <Button id='button-minus' 
                             basic color='red' 
-                            onClick={() => {setLastAction('-'), setCount(count - 1)}}> {/* <===== action,count settings */}
+                            onClick={() => {setLastAction('-'), setCount(count => count - 1)}}> {/* <===== action,count settings */}
                         -
                     </Button>
                 </div>

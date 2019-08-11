@@ -2,6 +2,7 @@ import React from 'react'
 import { Icon, Container, Divider, Grid, Header } from 'semantic-ui-react'
 
 import { CounterWithInnerState } from '../../components/CounterWithInnerState'
+import { CounterUsingClass } from '../../components/CounterUsingClass'
 
 const TabDemo1 = () => (
     <Container>
@@ -23,7 +24,7 @@ const TabDemo1 = () => (
             </Grid.Column>
             
             <Grid.Column>
-                <CounterWithInnerState/>
+                <CounterUsingClass/>
             </Grid.Column>
         </Grid>
 
