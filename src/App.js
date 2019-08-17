@@ -3,6 +3,7 @@ import { Menu } from 'semantic-ui-react'
 
 import TabDemo1 from './containers/TabDemo1'
 import TabDemo2 from './containers/TabDemo2'
+import TabDemo3 from './containers/TabDemo3'
 
 import './App.css'
 
@@ -19,6 +20,9 @@ export const App = () => {
           <Menu.Item name='demo2'
                       active={activeItem === 'demo2'}
                       onClick={(e, { name }) => {setActiveItem(name)}}/>
+          <Menu.Item name='demo3'
+                      active={activeItem === 'demo3'}
+                      onClick={(e, { name }) => {setActiveItem(name)}}/>
         </Menu>
 
         {activeItem === 'demo1' &&
@@ -26,6 +30,9 @@ export const App = () => {
         }
         {activeItem === 'demo2' &&
             <TabDemo2/>
+        }
+        {activeItem === 'demo3' &&
+            <TabDemo3/>
         }
       </div>
   );

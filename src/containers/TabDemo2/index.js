@@ -13,7 +13,7 @@ const TabDemo2 = () => {
 
             <Header as='h2' icon inverted textAlign='center'>
                 <Icon name='code' />
-                useState & useContext
+                useContext
             </Header>
             
             <Divider />
