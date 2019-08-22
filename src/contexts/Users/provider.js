@@ -15,7 +15,10 @@ const UsersProvider = props => {
     const [selectedUser, setSelectedUser] = useState(initialSelectedUser);
   
     const addNewUser = userName => {
-      const newUser = { id: new Date().getTime().toString(), name: userName };
+      const newUser = { 
+                id: users.length+1, 
+                name: userName
+              };
       setUsers(users.concat([newUser]));
     };
   

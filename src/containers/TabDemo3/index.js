@@ -9,8 +9,11 @@ import { UsersProvider } from '../../contexts/Users/provider' /* <===== import p
 
 const TabDemo3 = () => {
 
-    const users = [{ id: '1', name: 'uno'}, { id: '2', name: 'dos'}];
-    const selectedUser = { id: '1', name: 'uno'};
+    const users = [
+        { id: '1', name: 'Deadshot'}, 
+        { id: '2', name: 'Harley Quinn'},
+        { id: '3', name: 'Captain Boomerang'}
+    ];
 
     return (
         <Container>
@@ -22,7 +25,7 @@ const TabDemo3 = () => {
             
             <Divider />
 
-<UsersProvider users={users} selectedUser={selectedUser}> {/* <===== provider */}
+<UsersProvider users={users} selectedUser={users[0]}> {/* <===== provider */}
 
             <Grid container columns={2}>
                 <Grid.Column>

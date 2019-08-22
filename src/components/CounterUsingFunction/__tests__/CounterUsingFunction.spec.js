@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { shallow } from 'enzyme';
-import { CounterWithInnerState as Counter } from '../index'
+import { CounterUsingFunction as Counter } from '../index'
 
-describe("CounterWithInnerState", () => {
+describe("CounterUsingFunction", () => {
 
   it("renders without crashing", () => {
     const div = document.createElement("div");

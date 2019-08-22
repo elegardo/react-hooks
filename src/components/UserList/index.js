@@ -16,7 +16,7 @@ export function UserList() {
           {users.map(user => {
             return (
               <List.Item key={user.id}>
-                <List.Icon name='user' size='large' verticalAlign='middle'/>
+                <List.Icon name='users' size='large' verticalAlign='middle'/>
                 <List.Content>
                   <List.Header as='a' 
                               onClick={() => setSelectedUser(user)}>

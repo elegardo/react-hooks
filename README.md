@@ -27,6 +27,7 @@
 	useDebugValue
 
 * [API Reference](https://es.reactjs.org/docs/hooks-reference.html)
+* [Ejemplos](https://pablomagaz.com/blog/react-hooks-gran-cambio-se-avecina)
 
 # Hook useState
 
@@ -66,7 +67,30 @@
 	});
 
 ```
-[Ejemplo refactorizacion una clase](https://pbs.twimg.com/media/DquJO7rVsAAcYYr.jpg:large)
+Comparación entre una [clase que usa `this.state`](/src/components/CounterUsingClass/index.js) y una [función que usa `useState()`](/src/components/CounterUsingFunction/index.js)
+
+## Demo
+
+https://elegardo.github.io/react-hooks/
+
+# Hook useContext
+
+
+> *[Context](https://es.reactjs.org/docs/context.html) provee una forma de pasar datos a través del árbol de componentes sin tener que pasar props manualmente en cada nivel.*
+
+## Como funciona:
+
+![Screenshot](/images/prop-drilling-v-context.png)
+
+(*) `Prop drilling` propiedades fluyen de arriba hacia abajo en una jerarquía previamente establecida (padre a hijo, de hijo a nieto, de nieto a bisnieto y así sucesivamente).
+
+## Provider:
+
+Es el encargado de proveer el mecanismo de paso de los valores a los componentes hijos en la jerarquía mediante la propiedad value
+
+## Consumer:
+
+Un componente de React que se suscribe a cambios de contexto. Esto le permite suscribirse a un contexto dentro de un componente de función.
 
 ## Demo
 
